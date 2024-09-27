@@ -39,5 +39,5 @@ jobs:
       run: |
             echo "Conectando no EC2"
             echo "${{secrets.AWS_KEY_DAVI_PEM}}" > private_key && chmod 600 private_key 
-            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-54-147-58-2.compute-1.amazonaws.com "
+            ssh -o StrictHostKeyChecking=no -i private_key ubuntu@ec2-174-129-123-201.compute-1.amazonaws.com "
                 cd rep_davi_cavalcante_pratica_fase2/;git pull;./IniciarApp.sh"
